@@ -1,5 +1,6 @@
 import automation
-import gui
+import creds
 
-loadgui = gui.LoadGui()
-loadgui()
+
+print(creds.email)
+automation.Email_Credentials(creds.server,creds.email,creds.password)
