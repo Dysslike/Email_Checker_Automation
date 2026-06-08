@@ -2,7 +2,7 @@
 creds.py
 
 # Ignore virtual environment
-myenv/
+.venv/
 
 # Ignore Python cache
 __pycache__/
