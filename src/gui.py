@@ -1,29 +1,18 @@
 from tkinter import *
-from tkinter import ttk
+import tkinter as tk
 
 
-
-
-def Showname(args):
-    name_show.set(name())
-    
-
-root = Tk()
+root = tk.Tk()
+root.geometry("300x200")
 root.title("Did you get hired?")
 
+tk.Label(root, text="Email:").grid(row=0, column=0)
+tk.Label(root, text="Password:").grid(row=1, column=0)
 
-mainframe = ttk.Frame(root, padding =(3, 3, 12 , 12))
-mainframe.grid(column=0, row=0, sticky = (N, W, E, S))
+entry_email = tk.Entry(root)
+entry_password = tk.Entry(root, show="*")
 
-name = StringVar()
-name_entry = ttk.Entry(mainframe, width=7, textvariable=name)
-name_entry.grid(column=2, row=1,sticky=(W,E))
-
-ttk.Label(mainframe,text="Enter Name").grid(column=1,row=1,sticky=(W, E))
-
-ttk.Button(mainframe,text="printname",).grid(column=2,row=2,sticky=(W, E))
-
-name_show = StringVar()
-ttk.Label(mainframe,textvariable=name_show).grid(column=2,row=3,sticky=(W, E))
+entry_email.grid(row=0, column=1)
+entry_password.grid(row=1, column=1)
 
 root.mainloop()
